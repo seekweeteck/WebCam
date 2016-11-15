@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WebCam</string>
+    <string name="save">Save</string>
+    <string name="id">ID</string>
+    <string name="name">Name</string>
+    <string name="dob">DOB</string>
+</resources>
