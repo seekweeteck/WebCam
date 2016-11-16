@@ -12,40 +12,29 @@
     android:orientation="vertical"
     tools:context="my.edu.tarc.webcam.MainActivity">
 
-    <EditText
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textCapCharacters"
-        android:ems="10"
-        android:id="@+id/editTextID"
-        android:hint="@string/id" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editTextName"
-        android:hint="@string/name" />
+        android:text="@string/string_choose_file"
+        android:id="@+id/buttonChoose" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_portrait_black_24dp"
-        android:layout_marginBottom="116dp"
-        android:id="@+id/imageViewPreview" />
+        android:layout_weight="1"
+        android:id="@+id/imageView" />
+
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/photo"
-        android:id="@+id/imageButton"
-        android:onClick="takePhoto" />
+        android:text="@string/string_upload_image"
+        android:id="@+id/buttonUpload" />
+
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonSave"
-        tools:text="@string/save"
-        android:onClick="saveRecord" />
+        android:text="@string/string_view_image"
+        android:id="@+id/buttonViewImage" />
 </LinearLayout>

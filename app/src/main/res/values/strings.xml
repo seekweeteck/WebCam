@@ -5,4 +5,7 @@
     <string name="name">Name</string>
     <string name="dob">DOB</string>
     <string name="photo">Photo</string>
+    <string name="string_choose_file">Choose File</string>
+    <string name="string_upload_image">Upload Image</string>
+    <string name="string_view_image">View Image</string>
 </resources>
