@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onPostExecute(s);
                 loading.dismiss();
                 Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
+                Log.d("onPostExecute", s);
             }
 
             @Override
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 data.put(UPLOAD_PHOTO, uploadImage);
 
                 String result = rh.sendPostRequest(UPLOAD_URL, data);
-
+                Log.d("doInBackground", result);
                 return result;
             }
         }
@@ -131,14 +132,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
+
             //imageBitmap = (Bitmap) extras.get("data");
             //imageViewPreview.setImageBitmap(imageBitmap);
-            filePath = data.getData();
+
             try {
-                imageBitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+                //imageBitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+                Bundle extras = data.getExtras();
+                imageBitmap = (Bitmap) extras.get("data");
                 imageViewPreview.setImageBitmap(imageBitmap);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             //setPic();

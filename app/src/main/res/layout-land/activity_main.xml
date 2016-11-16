@@ -32,13 +32,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_portrait_black_24dp"
-        android:layout_marginBottom="116dp"
         android:id="@+id/imageViewPreview" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/photo"
+        android:src="@drawable/ic_add_a_photo_black_24dp"
         android:id="@+id/imageButton"
         android:onClick="takePhoto" />
 
